@@ -29,22 +29,27 @@ export const BlueResume = () => {
             <div className="resume_item resume_info">
               <div className="title">
                 <p className="bold">
-                  {data.firstName} {data.lastName}
+                  {data?.firstName?.length > 3 ? data.firstName : "Mohammd"}{" "}
+                  {data?.lastName?.length > 3 ? data.lastName : "Daniyal"}
                 </p>
-                <p className="regular">{data.Profession}</p>
+                <p className="regular">
+                  {data?.Profession?.length > 3
+                    ? data.Profession
+                    : "Software Engineer"}
+                </p>
               </div>
               <ul style={{ paddingLeft: "0px" }}>
                 <li>
                   {/* <GoLocation/> */}
                   <div className="data">
-                    {data.city}, {data.pinCode} <br /> {data.country}
+                    {data?.city}, {data?.pinCode} <br /> {data?.country}
                   </div>
                 </li>
                 <li>
-                  <div className="data">{data.phone}</div>
+                  <div className="data">{data?.phone}</div>
                 </li>
                 <li>
-                  <div className="data">{data.email}</div>
+                  <div className="data">{data?.email}</div>
                 </li>
                 <li>
                   <div className="data">www.mohamad.com</div>
@@ -144,7 +149,7 @@ export const BlueResume = () => {
               <p className="bold">About us</p>
             </div>
             <p>
-              {data.summary.length > 20
+              {data?.summary.length > 20
                 ? data.summary
                 : `Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Perspiciatis illo fugit officiis distinctio culpa officia totam
