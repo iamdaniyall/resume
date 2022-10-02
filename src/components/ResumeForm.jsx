@@ -19,7 +19,7 @@ const ResumeForm = () => {
   const handelSubmit = () => {
     localStorage.setItem("data", JSON.stringify(data));
     setTimeout(() => {
-      nav("/resume");
+      nav("/result");
     }, 1000);
   };
 

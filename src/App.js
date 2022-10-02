@@ -9,7 +9,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<ResumeForm />} />
-          <Route path="/resume" element={<BlueResume />} />
+          <Route path="/result" element={<BlueResume />} />
         </Routes>
       </BrowserRouter>
     </>
